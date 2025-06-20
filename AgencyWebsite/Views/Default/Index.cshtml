@@ -1,5 +1,5 @@
 ﻿@{
-    Layout = null;
+	Layout = null;
 }
 <!DOCTYPE html>
 <html lang="en">
@@ -8,374 +8,145 @@
 
 <body>
 
-    <div class="preloader d-flex align-items-center justify-content-center">
-        <div class="lds-ellipsis">
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-    </div>
+	<div class="preloader d-flex align-items-center justify-content-center">
+		<div class="lds-ellipsis">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</div>
 
 
-    <header class="header-area">
-       
-@await Component.InvokeAsync("_NavbarDefaultComponentPartial")
+	<header class="header-area">
 
-    </header>
-    <section class="hero-area">
-@await Component.InvokeAsync("_SliderDefaultComponentPartial")
-    </section>
-    <!-- ##### Breadcrumb Area Start ##### -->
-    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(/pixel-master/img/bg-img/8.jpg);">
-        <div class="container-fluid h-100">
-            <div class="row h-100 align-items-center">
-                <div class="col-12">
-                    <div class="breadcrumb-content">
-                        <h2>About Us</h2>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Breadcrumb Area End ##### -->
-    <!-- ##### Feature Area Start ##### -->
-    <section class="pixel-feature-area d-flex flex-wrap">
-        <!-- Feature Thumbnail -->
-        <div class="feature-thumbnail bg-img jarallax" style="background-image: url(/pixel-master/img/bg-img/12.jpg);"></div>
+		@await Component.InvokeAsync("_NavbarDefaultComponentPartial")
 
-        <!-- Feature Content -->
-        <div class="feature-content">
-            <h1>Pixel by Pixel</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, elit pulvinar interdum dapibus, est dui convallis orci, vel gravida erat ante in sapien. Ut sed tristique dui, id mattis enim. Vivamus ac mollis ligula. In feugiat, libero a posuere aliquam, lorem orci suscipit dui, sit amet pellentesque dolor diam et elit.</p>
-            <p>Morbi sed lectus sem. Suspendisse vehicula tellus viverra blandit pharetra. Nulla lacinia sit amet elit in congue. Suspendisse suscipit molestie tellus, id aliquet neque ullamcorper ac. Aliquam sed egestas lacus. Integer egestas erat diam.</p>
-            <a href="#" class="btn pixel-btn mt-15">CONTINUE READING</a>
-        </div>
-    </section>
-    <!-- ##### Feature Area End ##### -->
-    <!-- ##### Feature Area Start ##### -->
-    <section class="pixel-feature-area d-flex flex-wrap">
-        <!-- Feature Content -->
-        <div class="feature-content">
-            <h1>Pixel by Pixel</h1>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, elit pulvinar interdum dapibus, est dui convallis orci, vel gravida erat ante in sapien. Ut sed tristique dui, id mattis enim. Vivamus ac mollis ligula. In feugiat, libero a posuere aliquam, lorem orci suscipit dui, sit amet pellentesque dolor diam et elit.</p>
-            <p>Morbi sed lectus sem. Suspendisse vehicula tellus viverra blandit pharetra. Nulla lacinia sit amet elit in congue. Suspendisse suscipit molestie tellus, id aliquet neque ullamcorper ac. Aliquam sed egestas lacus. Integer egestas erat diam.</p>
-            <a href="#" class="btn pixel-btn mt-15">CONTINUE READING</a>
-        </div>
-
-        <!-- Feature Thumbnail -->
-        <div class="feature-thumbnail bg-img jarallax" style="background-image: url(/pixel-master/img/bg-img/9.jpg);"></div>
-    </section>
-    <!-- ##### Feature Area End ##### -->
-    <!-- ##### Cool Facts Area Start ##### -->
-    <section class="pixel-cool-facts-area bg-gray section-padding-100-0">
-        <div class="container-fluid">
-            <div class="row">
-
-                <!-- Single Cool Facts -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-fact mb-100">
-                        <div class="scf-icon">
-                            <img src="img/core-img/m1.png" alt="">
-                        </div>
-                        <div class="scf-text">
-                            <h2><span class="counter">3.451</span></h2>
-                            <h6>Projects Completed</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Cool Facts -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-fact mb-100">
-                        <div class="scf-icon">
-                            <img src="img/core-img/m2.png" alt="">
-                        </div>
-                        <div class="scf-text">
-                            <h2><span class="counter">235.025</span></h2>
-                            <h6>PSD Files</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Cool Facts -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-fact mb-100">
-                        <div class="scf-icon">
-                            <img src="img/core-img/m3.png" alt="">
-                        </div>
-                        <div class="scf-text">
-                            <h2><span class="counter">4021</span></h2>
-                            <h6>Presentations Made</h6>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Single Cool Facts -->
-                <div class="col-12 col-sm-6 col-lg-3">
-                    <div class="single-cool-fact mb-100">
-                        <div class="scf-icon">
-                            <img src="img/core-img/m4.png" alt="">
-                        </div>
-                        <div class="scf-text">
-                            <h2><span class="counter">11.236</span></h2>
-                            <h6>Deadlines Achived</h6>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-    <!-- ##### Cool Facts Area End ##### -->
-@await Component.InvokeAsync("_Top2PhotosComponentPartial")
-
-    <!-- İçerik örnek -->
-    <!-- # DALGALI GÖRÜNÜM #
-    <div style="position: relative; background-color: #007bff; padding-top: 60px; overflow: hidden;">
-        <!-- İnce ters yönlü dalga
-        <svg viewBox="0 0 1200 50" preserveAspectRatio="none"
-            style="position: absolute; top: 0; left: 0; width: 100%; height: 50px; display: block;">
-            <path d="M0,50 C300,0 900,50 1200,10 L1200,0 L0,0 Z" fill="#ffffff"></path>
-        </svg>
-
-        <section class="nl-area section-padding-100-0" style="position: relative; z-index: 2; color: white;">
-            <div class="container">
-                <div class="row align-items-end">
-                    <div class="col-12 col-md-9">
-                        <div class="nl-form mb-100">
-                            <h4 style="color: white;">Stay in touch with us</h4>
-                            <form action="#" method="post">
-                                <input type="email" name="nl-email" id="nlEmail" placeholder="Email Address ..."
-                                    style="padding: 10px; border-radius: 5px; border: none; width: 70%; background-color: rgba(255,255,255,0.2); color: white;">
-                                <button type="submit" class="d-none"></button>
-                            </form>
-                        </div>
-                    </div>
-                    <div class="col-12 col-md-3">
-                        <div class="view-projects-btn text-md-end text-center mb-100">
-                            <a href="#" class="btn pixel-btn" style="background-color: #0056b3; color: white;">View Project</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </div>-->
-    </div>
+	</header>
+	<section class="hero-area">
+		@await Component.InvokeAsync("_SliderDefaultComponentPartial")
+	</section>
 
 
-    <!-- ##### Newsletter Area End ###### -->
-    <!-- ##### Portfolio Area Start ###### -->
-    <!-- Bootstrap 5 CSS dahil edilmeli -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-
-    <!-- # ALT KISIM DEĞİŞTİ #  -->
-    <div class="container py-5">
-        <!-- Başlık -->
-        <div class="row mb-4">
-            <div class="col-12 text-center">
-                <h2 style="font-weight: bold;">Made by Spoiler Agency</h2>
-                <img src="/pixel-master/img/core-img/x.png" alt="" style="max-width: 100px;">
-            </div>
-        </div>
-
-        <!-- Filtre Butonları
-        <div class="row mb-4">
-            <div class="col-12 text-center">
-                <div class="btn-group" role="group">
-                    <button class="btn btn-dark active" data-filter="*" style="margin: 0 5px;">All Projects</button>
-                    <button class="btn btn-outline-dark" data-filter=".visual" style="margin: 0 5px;">Visual</button>
-                    <button class="btn btn-outline-dark" data-filter=".add" style="margin: 0 5px;">Advertising</button>
-                    <button class="btn btn-outline-dark" data-filter=".web" style="margin: 0 5px;">Web Development</button>
-                </div>
-            </div>
-        </div>-->
-        <!-- Galeri Grid -->
-@await Component.InvokeAsync("_GalleryComponentPartial")
-        <!-- Galeri Grid Sonu -->
-    </div>
+	@await Component.InvokeAsync("_AboutDefaultComponentPartial")
 
 
-    <!-- ##### Team Area Start ##### -->
-    <section class="team-member-area section-padding-100-0">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Section Heading -->
-                    <div class="section-heading text-center">
-                        <h2>Our Team</h2>
-                        <img class="mb-30" src="img/core-img/x.png" alt="">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum quis sem sed pharetra. Morbi tempus lobortis nunc non commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
-                    </div>
-                </div>
-            </div>
 
-            <div class="row">
-                <!-- Single Team Member -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-team-member mb-100">
-                        <img src="/pixel-master/img/bg-img/14.jpg" alt="">
-                        <!-- Hover Text -->
-                        <div class="hover-text d-flex align-items-end justify-content-center text-center">
-                            <div class="hover--">
-                                <h4>Jane Doe</h4>
-                                <h6>Digital Designer</h6>
-                                <div class="social-info">
-                                    <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+	<!-- ##### Cool Facts Area Start ##### -->
+	@await Component.InvokeAsync("_TotalCountDefaultComponentPartial")
+	<!-- ##### Cool Facts Area End ##### -->
+	@await Component.InvokeAsync("_Top2PhotosComponentPartial")
 
-                <!-- Single Team Member -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-team-member mb-100">
-                        <img src="/pixel-master/img/bg-img/15.jpg" alt="">
-                        <!-- Hover Text -->
-                        <div class="hover-text d-flex align-items-end justify-content-center text-center">
-                            <div class="hover--">
-                                <h4>Jane Doe</h4>
-                                <h6>Digital Designer</h6>
-                                <div class="social-info">
-                                    <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+	<!-- İçerik örnek -->
+	<!-- # DALGALI GÖRÜNÜM #
+	<div style="position: relative; background-color: #007bff; padding-top: 60px; overflow: hidden;">
+		<!-- İnce ters yönlü dalga
+		<svg viewBox="0 0 1200 50" preserveAspectRatio="none"
+			style="position: absolute; top: 0; left: 0; width: 100%; height: 50px; display: block;">
+			<path d="M0,50 C300,0 900,50 1200,10 L1200,0 L0,0 Z" fill="#ffffff"></path>
+		</svg>
 
-                <!-- Single Team Member -->
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="single-team-member mb-100">
-                        <img src="/pixel-master/img/bg-img/16.jpg" alt="">
-                        <!-- Hover Text -->
-                        <div class="hover-text d-flex align-items-end justify-content-center text-center">
-                            <div class="hover--">
-                                <h4>Jane Doe</h4>
-                                <h6>Digital Designer</h6>
-                                <div class="social-info">
-                                    <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                    <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Team Area End ##### -->
-    <br />
-    <br />
-    <br />
-    <!-- ##### Testimonial Area Start ##### -->
-    <section class="testimonial-area mb-100">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <!-- Testimonial Slides -->
-                    <div class="testimonial-slides owl-carousel">
-
-                        <!-- Single Slide -->
-                        <div class="single-testimonial-slide">
-                            <img src="/pixel-master/img/bg-img/17.jpg" alt="">
-                            <h4>John Doe</h4>
-                            <span>Client</span>
-                            <h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-                        </div>
-
-                        <!-- Single Slide -->
-                        <div class="single-testimonial-slide">
-                            <img src="/pixel-master/img/bg-img/18.jpg" alt="">
-                            <h4>John Doe</h4>
-                            <span>Client</span>
-                            <h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-                        </div>
-
-                        <!-- Single Slide -->
-                        <div class="single-testimonial-slide">
-                            <img src="/pixel-master/img/bg-img/17.jpg" alt="">
-                            <h4>John Doe</h4>
-                            <span>Client</span>
-                            <h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-                        </div>
-
-                        <!-- Single Slide -->
-                        <div class="single-testimonial-slide">
-                            <img src="/pixel-master/img/bg-img/18.jpg" alt="">
-                            <h4>John Doe</h4>
-                            <span>Client</span>
-                            <h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-                        </div>
-
-                        <!-- Single Slide -->
-                        <div class="single-testimonial-slide">
-                            <img src="/pixel-master/img/bg-img/17.jpg" alt="">
-                            <h4>John Doe</h4>
-                            <span>Client</span>
-                            <h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-                        </div>
-
-                        <!-- Single Slide -->
-                        <div class="single-testimonial-slide">
-                            <img src="/pixel-master/img/bg-img/18.jpg" alt="">
-                            <h4>John Doe</h4>
-                            <span>Client</span>
-                            <h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- ##### Testimonial Area End ##### -->
+		<section class="nl-area section-padding-100-0" style="position: relative; z-index: 2; color: white;">
+			<div class="container">
+				<div class="row align-items-end">
+					<div class="col-12 col-md-9">
+						<div class="nl-form mb-100">
+							<h4 style="color: white;">Stay in touch with us</h4>
+							<form action="#" method="post">
+								<input type="email" name="nl-email" id="nlEmail" placeholder="Email Address ..."
+									style="padding: 10px; border-radius: 5px; border: none; width: 70%; background-color: rgba(255,255,255,0.2); color: white;">
+								<button type="submit" class="d-none"></button>
+							</form>
+						</div>
+					</div>
+					<div class="col-12 col-md-3">
+						<div class="view-projects-btn text-md-end text-center mb-100">
+							<a href="#" class="btn pixel-btn" style="background-color: #0056b3; color: white;">View Project</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+	</div>-->
+	</div>
 
 
-    <!-- # DALGALI GÖRÜNÜM # -->
-    <div style="position: relative; background-color: #007bff; padding-top: 60px; overflow: hidden;">
+	<!-- ##### Newsletter Area End ###### -->
+	<!-- ##### Portfolio Area Start ###### -->
+	<!-- Bootstrap 5 CSS dahil edilmeli -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
-        <!-- Daha sığ, ince ve üstten kısa ters yönlü SVG dalga -->
-        <svg viewBox="0 0 1200 50" preserveAspectRatio="none"
-             style="position: absolute; top: 0; left: 0; width: 100%; height: 50px; display: block;">
-            <path d="M0,50 C300,0 900,50 1200,10 L1200,0 L0,0 Z" fill="#ffffff"></path>
-        </svg>
+	<!-- # ALT KISIM DEĞİŞTİ #  -->
+	<div class="container py-5">
+		<!-- Başlık -->
+		<div class="row mb-4">
+			<div class="col-12 text-center">
+				<h2 style="font-weight: bold;">Made by Spoiler Agency</h2>
+				<img src="/pixel-master/img/core-img/x.png" alt="" style="max-width: 100px;">
+			</div>
+		</div>
 
-        <!-- İçerik örnek -->
-        <div style="position: relative; z-index: 2; color: white; padding: 50px 20px 20px; text-align: center;">
+		<!-- Filtre Butonları
+		<div class="row mb-4">
+			<div class="col-12 text-center">
+				<div class="btn-group" role="group">
+					<button class="btn btn-dark active" data-filter="*" style="margin: 0 5px;">All Projects</button>
+					<button class="btn btn-outline-dark" data-filter=".visual" style="margin: 0 5px;">Visual</button>
+					<button class="btn btn-outline-dark" data-filter=".add" style="margin: 0 5px;">Advertising</button>
+					<button class="btn btn-outline-dark" data-filter=".web" style="margin: 0 5px;">Web Development</button>
+				</div>
+			</div>
+		</div>-->
+		<!-- Galeri Grid -->
+		@await Component.InvokeAsync("_GalleryComponentPartial")
+		<!-- Galeri Grid Sonu -->
+	</div>
 
-            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
 
-            <!-- ##### Contact Area Start #####-->
-@await Component.InvokeAsync("_ContactComponentPartial")
-    </div></div>
+	<!-- ##### Team Area Start ##### -->
+	@await Component.InvokeAsync("_TeamDefaultComponentPartial")
+	<!-- ##### Team Area End ##### -->
+	<br />
+	<br />
+	<br />
+	<!-- ##### Testimonial Area Start ##### -->
+	@await Component.InvokeAsync("_TestimonialDefaultComponentPartial")
+	<!-- ##### Testimonial Area End ##### -->
+	<!-- # DALGALI GÖRÜNÜM # -->
+	<div style="position: relative; background-color: #007bff; padding-top: 60px; overflow: hidden;">
+
+		<!-- Daha sığ, ince ve üstten kısa ters yönlü SVG dalga -->
+		<svg viewBox="0 0 1200 50" preserveAspectRatio="none"
+			 style="position: absolute; top: 0; left: 0; width: 100%; height: 50px; display: block;">
+			<path d="M0,50 C300,0 900,50 1200,10 L1200,0 L0,0 Z" fill="#ffffff"></path>
+		</svg>
+
+		<!-- İçerik örnek -->
+		<div style="position: relative; z-index: 2; color: white; padding: 50px 20px 20px; text-align: center;">
+
+			<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+			<!-- ##### Contact Area Start #####-->
+			@await Component.InvokeAsync("_ContactComponentPartial")
+		</div>
+	</div>
 
 
-@await Component.InvokeAsync("_FooterDefaultComponentPartial")
+	@await Component.InvokeAsync("_FooterDefaultComponentPartial")
 
 
-    <!-- ##### All Javascript Script ##### -->
-        <script src="/pixel-master/js/jquery/jquery-2.2.4.min.js"></script>
-        <!-- Popper js -->
-        <script src="/pixel-master/js/bootstrap/popper.min.js"></script>
-        <!-- Bootstrap js -->
-        <script src="/pixel-master/js/bootstrap/bootstrap.min.js"></script>
-        <!-- All Plugins js -->
-        <script src="/pixel-master/js/plugins/plugins.js"></script>
-        <!-- Active js -->
-        <script src="/pixel-master/js/active.js"></script>
+	<!-- ##### All Javascript Script ##### -->
+	<script src="/pixel-master/js/jquery/jquery-2.2.4.min.js"></script>
+	<!-- Popper js -->
+	<script src="/pixel-master/js/bootstrap/popper.min.js"></script>
+	<!-- Bootstrap js -->
+	<script src="/pixel-master/js/bootstrap/bootstrap.min.js"></script>
+	<!-- All Plugins js -->
+	<script src="/pixel-master/js/plugins/plugins.js"></script>
+	<!-- Active js -->
+	<script src="/pixel-master/js/active.js"></script>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
 </body>
 
