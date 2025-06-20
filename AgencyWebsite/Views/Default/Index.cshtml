@@ -1,0 +1,131 @@
+﻿@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+@await Component.InvokeAsync("_HeadDefaultComponentPartial")
+
+<body>
+
+    <div class="preloader d-flex align-items-center justify-content-center">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+
+
+    <header class="header-area">
+       
+@await Component.InvokeAsync("_NavbarDefaultComponentPartial")
+
+    </header>
+    <section class="hero-area">
+@await Component.InvokeAsync("_SliderDefaultComponentPartial")
+    </section>
+@await Component.InvokeAsync("_Top2PhotosComponentPartial")
+
+    <!-- İçerik örnek -->
+    <!-- # DALGALI GÖRÜNÜM #
+    <div style="position: relative; background-color: #007bff; padding-top: 60px; overflow: hidden;">
+        <!-- İnce ters yönlü dalga
+        <svg viewBox="0 0 1200 50" preserveAspectRatio="none"
+            style="position: absolute; top: 0; left: 0; width: 100%; height: 50px; display: block;">
+            <path d="M0,50 C300,0 900,50 1200,10 L1200,0 L0,0 Z" fill="#ffffff"></path>
+        </svg>
+
+        <section class="nl-area section-padding-100-0" style="position: relative; z-index: 2; color: white;">
+            <div class="container">
+                <div class="row align-items-end">
+                    <div class="col-12 col-md-9">
+                        <div class="nl-form mb-100">
+                            <h4 style="color: white;">Stay in touch with us</h4>
+                            <form action="#" method="post">
+                                <input type="email" name="nl-email" id="nlEmail" placeholder="Email Address ..."
+                                    style="padding: 10px; border-radius: 5px; border: none; width: 70%; background-color: rgba(255,255,255,0.2); color: white;">
+                                <button type="submit" class="d-none"></button>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-3">
+                        <div class="view-projects-btn text-md-end text-center mb-100">
+                            <a href="#" class="btn pixel-btn" style="background-color: #0056b3; color: white;">View Project</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>-->
+    </div>
+
+
+    <!-- ##### Newsletter Area End ###### -->
+    <!-- ##### Portfolio Area Start ###### -->
+    <!-- Bootstrap 5 CSS dahil edilmeli -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- # ALT KISIM DEĞİŞTİ #  -->
+    <div class="container py-5">
+        <!-- Başlık -->
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h2 style="font-weight: bold;">Made by pixel</h2>
+                <img src="/pixel-master/img/core-img/x.png" alt="" style="max-width: 100px;">
+            </div>
+        </div>
+
+        <!-- Filtre Butonları
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <div class="btn-group" role="group">
+                    <button class="btn btn-dark active" data-filter="*" style="margin: 0 5px;">All Projects</button>
+                    <button class="btn btn-outline-dark" data-filter=".visual" style="margin: 0 5px;">Visual</button>
+                    <button class="btn btn-outline-dark" data-filter=".add" style="margin: 0 5px;">Advertising</button>
+                    <button class="btn btn-outline-dark" data-filter=".web" style="margin: 0 5px;">Web Development</button>
+                </div>
+            </div>
+        </div>-->
+        <!-- Galeri Grid -->
+@await Component.InvokeAsync("_GalleryComponentPartial")
+        <!-- Galeri Grid Sonu -->
+    </div>
+
+
+    <!-- # DALGALI GÖRÜNÜM # -->
+    <div style="position: relative; background-color: #007bff; padding-top: 60px; overflow: hidden;">
+
+        <!-- Daha sığ, ince ve üstten kısa ters yönlü SVG dalga -->
+        <svg viewBox="0 0 1200 50" preserveAspectRatio="none"
+             style="position: absolute; top: 0; left: 0; width: 100%; height: 50px; display: block;">
+            <path d="M0,50 C300,0 900,50 1200,10 L1200,0 L0,0 Z" fill="#ffffff"></path>
+        </svg>
+
+        <!-- İçerik örnek -->
+        <div style="position: relative; z-index: 2; color: white; padding: 50px 20px 20px; text-align: center;">
+
+            <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+            <!-- ##### Contact Area Start #####-->
+@await Component.InvokeAsync("_ContactComponentPartial")
+    </div>
+
+@await Component.InvokeAsync("_FooterDefaultComponentPartial")
+
+
+    <!-- ##### All Javascript Script ##### -->
+        <script src="/pixel-master/js/jquery/jquery-2.2.4.min.js"></script>
+        <!-- Popper js -->
+        <script src="/pixel-master/js/bootstrap/popper.min.js"></script>
+        <!-- Bootstrap js -->
+        <script src="/pixel-master/js/bootstrap/bootstrap.min.js"></script>
+        <!-- All Plugins js -->
+        <script src="/pixel-master/js/plugins/plugins.js"></script>
+        <!-- Active js -->
+        <script src="/pixel-master/js/active.js"></script>
+
+</body>
+
+</html>
