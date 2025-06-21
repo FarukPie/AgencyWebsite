@@ -1,76 +1,41 @@
-﻿<section class="team-member-area section-padding-100-0">
+﻿@model List<Team>
+<section class="team-member-area section-padding-100-0">
     <div class="container">
         <div class="row">
             <div class="col-12">
                 <!-- Section Heading -->
-                <div class="section-heading text-center">
-                    <h2>Our Team</h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut rutrum quis sem sed pharetra. Morbi tempus lobortis nunc non commodo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+				<div class="section-heading text-center">
+					<h2>Takımımız</h2>
+                    @foreach(var item in Model)
+                    {
+                    <p>@item.Topdescription</p>
+                    }
+                   
                 </div>
             </div>
         </div>
 
         <div class="row">
             <!-- Single Team Member -->
-            <div class="col-12 col-md-6 col-lg-4">
+            @foreach(var item in Model)
+            {
+                   <div class="col-12 col-md-6 col-lg-4">
                 <div class="single-team-member mb-100">
-                    <img src="/pixel-master/img/bg-img/14.jpg" alt="">
+                    <img src="@item.imgUrl" alt="">
                     <!-- Hover Text -->
                     <div class="hover-text d-flex align-items-end justify-content-center text-center">
                         <div class="hover--">
-                            <h4>Jane Doe</h4>
-                            <h6>Digital Designer</h6>
-                            <div class="social-info">
-                                <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
-                            </div>
+                            <h4>@item.Namesurname</h4>
+                            <h6>@item.Title</h6>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Single Team Member -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-team-member mb-100">
-                    <img src="/pixel-master/img/bg-img/15.jpg" alt="">
-                    <!-- Hover Text -->
-                    <div class="hover-text d-flex align-items-end justify-content-center text-center">
-                        <div class="hover--">
-                            <h4>Jane Doe</h4>
-                            <h6>Digital Designer</h6>
-                            <div class="social-info">
-                                <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            }
+         
 
-            <!-- Single Team Member -->
-            <div class="col-12 col-md-6 col-lg-4">
-                <div class="single-team-member mb-100">
-                    <img src="/pixel-master/img/bg-img/16.jpg" alt="">
-                    <!-- Hover Text -->
-                    <div class="hover-text d-flex align-items-end justify-content-center text-center">
-                        <div class="hover--">
-                            <h4>Jane Doe</h4>
-                            <h6>Digital Designer</h6>
-                            <div class="social-info">
-                                <a href="#"><i class="fa fa-behance" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-dribbble" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-flickr" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                                <a href="#"><i class="fa fa-pinterest" aria-hidden="true"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 </section>

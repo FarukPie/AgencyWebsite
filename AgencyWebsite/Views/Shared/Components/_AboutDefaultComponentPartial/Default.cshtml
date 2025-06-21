@@ -1,5 +1,6 @@
-﻿<!-- ##### Breadcrumb Area Start ##### -->
-<section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(/pixel-master/img/bg-img/8.jpg);">
+﻿@model List<About>
+
+    <section class="breadcrumb-area bg-img bg-overlay jarallax" style="background-image: url(/pixel-master/img/bg-img/8.jpg);">
     <div class="container-fluid h-100">
         <div class="row h-100 align-items-center">
             <div class="col-12">
@@ -10,32 +11,41 @@
         </div>
     </div>
 </section>
+
+
 <!-- ##### Breadcrumb Area End ##### -->
 <!-- ##### Feature Area Start ##### -->
 <section class="pixel-feature-area d-flex flex-wrap">
     <!-- Feature Thumbnail -->
-    <div class="feature-thumbnail bg-img jarallax" style="background-image: url(/pixel-master/img/bg-img/12.jpg);"></div>
+    @foreach (var item in Model)
+    {
+        <div class="feature-thumbnail bg-img jarallax" style="background-image: url(@item.imgUrl1);"></div>
 
-    <!-- Feature Content -->
-    <div class="feature-content">
-        <h1>Pixel by Pixel</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, elit pulvinar interdum dapibus, est dui convallis orci, vel gravida erat ante in sapien. Ut sed tristique dui, id mattis enim. Vivamus ac mollis ligula. In feugiat, libero a posuere aliquam, lorem orci suscipit dui, sit amet pellentesque dolor diam et elit.</p>
-        <p>Morbi sed lectus sem. Suspendisse vehicula tellus viverra blandit pharetra. Nulla lacinia sit amet elit in congue. Suspendisse suscipit molestie tellus, id aliquet neque ullamcorper ac. Aliquam sed egestas lacus. Integer egestas erat diam.</p>
+        <!-- Feature Content -->
 
-    </div>
+        <div class="feature-content">
+            <h1>@item.Title</h1>
+            <p>@item.Description1</p>
+
+        </div>
+    }
 </section>
-<!-- ##### Feature Area End ##### -->
+
+    <!-- ##### Feature Area End ##### -->
 <!-- ##### Feature Area Start ##### -->
 <section class="pixel-feature-area d-flex flex-wrap">
     <!-- Feature Content -->
-    <div class="feature-content">
-        <h1>Pixel by Pixel</h1>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut hendrerit, elit pulvinar interdum dapibus, est dui convallis orci, vel gravida erat ante in sapien. Ut sed tristique dui, id mattis enim. Vivamus ac mollis ligula. In feugiat, libero a posuere aliquam, lorem orci suscipit dui, sit amet pellentesque dolor diam et elit.</p>
-        <p>Morbi sed lectus sem. Suspendisse vehicula tellus viverra blandit pharetra. Nulla lacinia sit amet elit in congue. Suspendisse suscipit molestie tellus, id aliquet neque ullamcorper ac. Aliquam sed egestas lacus. Integer egestas erat diam.</p>
+    @foreach (var item in Model)
+    {
+        <div class="feature-content">
+            <h1>@item.Title</h1>
+            <p>@item.Description2</p>
+            
 
-    </div>
+        </div>
 
-    <!-- Feature Thumbnail -->
-    <div class="feature-thumbnail bg-img jarallax" style="background-image: url(/pixel-master/img/bg-img/9.jpg);"></div>
+        <!-- Feature Thumbnail -->
+        <div class="feature-thumbnail bg-img jarallax" style="background-image: url(@item.imgUrl2);"></div>
+    }
 </section>
 <!-- ##### Feature Area End ##### -->

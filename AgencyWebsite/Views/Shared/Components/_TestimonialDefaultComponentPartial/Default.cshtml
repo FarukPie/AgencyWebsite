@@ -1,57 +1,22 @@
-﻿<section class="testimonial-area mb-100">
+﻿@model List<Testimonial>
+<section class="testimonial-area mb-100">
 	<div class="container">
 		<div class="row">
 			<div class="col-12">
+
 				<!-- Testimonial Slides -->
 				<div class="testimonial-slides owl-carousel">
 
-					<!-- Single Slide -->
-					<div class="single-testimonial-slide">
-						<img src="/pixel-master/img/bg-img/17.jpg" alt="">
-						<h4>John Doe</h4>
-						<span>Client</span>
-						<h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-					</div>
+					@foreach (var item in Model)
+					{
+						<div class="single-testimonial-slide">
+							<img src="@item.imgUrl" alt="">
+							<h4>@item.Namesurname</h4>
+							<span>@item.Job</span>
+							<h5>@item.Comment</h5>
+						</div>
 
-					<!-- Single Slide -->
-					<div class="single-testimonial-slide">
-						<img src="/pixel-master/img/bg-img/18.jpg" alt="">
-						<h4>John Doe</h4>
-						<span>Client</span>
-						<h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-					</div>
-
-					<!-- Single Slide -->
-					<div class="single-testimonial-slide">
-						<img src="/pixel-master/img/bg-img/17.jpg" alt="">
-						<h4>John Doe</h4>
-						<span>Client</span>
-						<h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-					</div>
-
-					<!-- Single Slide -->
-					<div class="single-testimonial-slide">
-						<img src="/pixel-master/img/bg-img/18.jpg" alt="">
-						<h4>John Doe</h4>
-						<span>Client</span>
-						<h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-					</div>
-
-					<!-- Single Slide -->
-					<div class="single-testimonial-slide">
-						<img src="/pixel-master/img/bg-img/17.jpg" alt="">
-						<h4>John Doe</h4>
-						<span>Client</span>
-						<h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-					</div>
-
-					<!-- Single Slide -->
-					<div class="single-testimonial-slide">
-						<img src="/pixel-master/img/bg-img/18.jpg" alt="">
-						<h4>John Doe</h4>
-						<span>Client</span>
-						<h5>Suspendisse ac tempor nisl. Morbi vel purus vel ligula laoreet tristique vel tempus orci. Curabitur eget vulputate mauris. Vestibulum eu sem aliquam, convallis erat quis, dictum purus. </h5>
-					</div>
+					}
 
 				</div>
 			</div>
