@@ -2,7 +2,7 @@
 
 namespace AgencyWebsite.ViewComponents
 {
-    public class _AdminSidebarComponent: ViewComponent
+    public class _AdminThemeSettingComponentPartial:ViewComponent
     {
         public IViewComponentResult Invoke()
         {

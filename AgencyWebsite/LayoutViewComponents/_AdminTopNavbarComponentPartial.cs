@@ -1,13 +1,12 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace AgencyWebsite.ViewComponents
+namespace AgencyWebsite.LayoutViewComponents
 {
-    public class _AdminHeadComponent:ViewComponent
+    public class _AdminTopNavbarComponentPartial : ViewComponent
     {
         public IViewComponentResult Invoke()
         {
             return View();
         }
-
     }
 }
