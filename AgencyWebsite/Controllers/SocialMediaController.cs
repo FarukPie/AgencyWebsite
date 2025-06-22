@@ -1,9 +1,11 @@
 ﻿using AgencyWebsite.Context;
 using AgencyWebsite.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgencyWebsite.Controllers
 {
+    [Authorize]
     public class SocialMediaController : Controller
     {
         private readonly spoilerContext _context;

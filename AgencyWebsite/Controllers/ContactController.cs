@@ -1,8 +1,10 @@
 ﻿using AgencyWebsite.Context;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgencyWebsite.Controllers
 {
+    [Authorize]
     public class ContactController : Controller
     {
         private readonly spoilerContext _context;

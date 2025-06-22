@@ -20,6 +20,7 @@ namespace AgencyWebsite.Context
         public DbSet<Testimonial> Testimonials { get; set; }
         public DbSet<TwoPhoto> TwoPhotos { get; set; }
         public DbSet<Work> Works { get; set; }
+        public DbSet<Login> Logins { get; set; }
 
     }
 }

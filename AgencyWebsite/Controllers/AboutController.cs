@@ -1,10 +1,12 @@
 ﻿using AgencyWebsite.Context;
 using AgencyWebsite.Entities;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
 namespace AgencyWebsite.Controllers
 {
+    [Authorize]
     public class AboutController : Controller
     {
         private readonly spoilerContext _context;
