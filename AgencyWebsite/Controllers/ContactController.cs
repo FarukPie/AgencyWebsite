@@ -17,5 +17,12 @@ namespace AgencyWebsite.Controllers
             var value=_context.Contacts.ToList();
             return View(value);
         }
+        public IActionResult DeleteContact(int id)
+        {
+            var value = _context.Contacts.Find(id);
+            _context.Contacts.Remove(value);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

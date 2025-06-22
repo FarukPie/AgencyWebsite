@@ -1,0 +1,32 @@
+﻿@model Work
+@{
+	ViewData["Title"] = "UpdateSlider";
+	Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="row">
+	<div class="col-12 grid-margin stretch-card">
+		<div class="card">
+			<div class="card-body">
+				<h4 class="card-title">Yapılan İş Güncelleme Sayfası</h4>
+				<form class="forms-sample" method="post">
+
+					<div class="form-group">
+						<input type="hidden" asp-for="WorkId" />
+						<label for="exampleInputName1">Başlığı Güncelle</label>
+						<input type="text" class="form-control" id="exampleInputName1" asp-for="Title">
+					</div>
+
+					<div class="form-group">
+						<input type="hidden" asp-for="WorkId" />
+						<label for="exampleInputName1">Sayıyı Güncelle</label>
+						<input type="text" class="form-control" id="exampleInputName1" asp-for="Count">
+					</div>
+
+
+					<button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+					<a href="/Works/Index" class="btn btn-outline-primary">Iptal</a>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

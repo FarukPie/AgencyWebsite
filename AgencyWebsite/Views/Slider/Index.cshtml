@@ -13,12 +13,9 @@
 					<table class="table">
 						<thead>
 							<tr>
-								<th>Açıklama1</th>
-								<th>Açıklama2</th>
+								<th>Kalın Punto Başlık</th>
+								<th>Alt Açıklama</th>
 								<th>Resim Url</th>
-
-
-
 							</tr>
 						</thead>
 						<tbody>
@@ -30,8 +27,8 @@
 									<td>@item.Description2</td>
 									<td>@item.imgUrl1</td>
 
-									<td><a href="/Category/DeleteCategory/@item.SliderId" class="btn btn-outline-danger">Delete</a></td>
-									<td><a href="/Category/UpdateCategory/@item.SliderId" class="btn btn-outline-success">Update</a></td>
+									<td><a href="/Slider/DeleteSlider/@item.SliderId" class="btn btn-outline-danger">Sil</a></td>
+									<td><a href="/Slider/UpdateSlider/@item.SliderId" class="btn btn-outline-success">Güncelle</a></td>
 								</tr>
 
 							}
@@ -39,7 +36,7 @@
 						</tbody>
 					</table>
 					<br><br />
-					<a href="/Category/AddCategory" class="btn btn-outline-primary">Add New Category</a>
+					<a href="/Slider/CreateSlider" class="btn btn-outline-primary">Yeni Slayt Ekle</a>
 				</div>
 			</div>
 		</div>

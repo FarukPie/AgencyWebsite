@@ -1,4 +1,5 @@
 ﻿using AgencyWebsite.Context;
+using AgencyWebsite.Entities;
 using Microsoft.AspNetCore.Mvc;
 
 namespace AgencyWebsite.Controllers
@@ -16,6 +17,20 @@ namespace AgencyWebsite.Controllers
         {
             var value=_context.TwoPhotos.ToList();
             return View(value);
+        }
+
+        [HttpGet]
+        public IActionResult UpdatePhoto(int id)
+        {
+            var value = _context.TwoPhotos.Find(id);
+            return View(value);
+        }
+        [HttpPost]
+        public IActionResult UpdatePhoto(TwoPhoto photo)
+        {
+            _context.TwoPhotos.Update(photo);
+            _context.SaveChanges();
+            return RedirectToAction("Index");
         }
     }
 }

@@ -1,0 +1,55 @@
+﻿@model About
+@{
+    ViewData["Title"] = "UpdateUpdate";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Hakkımda Güncelleme Sayfası</h4>
+                <form class="forms-sample" method="post">
+
+                    <div class="form-group">
+                        <input type="hidden" asp-for="AboutId" />
+                        <label for="exampleInputName1">Başlığı Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="Title">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden" asp-for="AboutId" />
+                        <label for="exampleInputName1">Alt Başlığı Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="Title2">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden" asp-for="AboutId" />
+                        <label for="exampleInputName1">Açıklamayı Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="Description1">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden" asp-for="AboutId" />
+                        <label for="exampleInputName1">Alt Açıklamayı Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="Description2">
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" asp-for="AboutId" />
+                        <label for="exampleInputName1">Birinci Resim Urlsini Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="imgUrl1">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden" asp-for="AboutId" />
+                        <label for="exampleInputName1">İkinci Resim Urlsini Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="imgUrl2">
+                    </div>
+
+
+                    <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+                    <a href="/About/Index" class="btn btn-outline-primary">Iptal</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

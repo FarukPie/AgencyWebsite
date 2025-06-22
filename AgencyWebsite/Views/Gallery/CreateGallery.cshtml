@@ -1,0 +1,37 @@
+﻿@model Gallery
+@{
+    ViewData["Title"] = "CreateGallery";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Fotoğraf Ekleme Sayfası</h4>
+                <form class="forms-sample" method="post">
+
+                    <div class="form-group">
+                        <label for="exampleInputName1">Başlık Ekle</label>
+                        <input type="text" class="form-control" id="exampleInputName1"  asp-for="HoverTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Ana Başlık Ekle</label>
+                        <input type="text" class="form-control" id="exampleInputName1"  asp-for="MainTitle">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Resim Url Ekle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" asp-for="imgUrl">
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputName1">Açıklama Ekle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" asp-for="Description">
+                    </div>
+             
+
+                    <button type="submit" class="btn btn-primary mr-2">Ekle</button>
+                    <a href="/Gallery/Index" class="btn btn-outline-primary">Iptal</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

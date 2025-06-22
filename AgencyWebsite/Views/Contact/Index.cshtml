@@ -8,7 +8,7 @@
     <div class="col-lg-12 grid-margin stretch-card">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">Hakkımda Bölümü</h3>
+                <h3 class="card-title">Gelen Kutusu</h3>
                 <div class="table-responsive">
                     <table class="table">
                         <thead>
@@ -30,15 +30,11 @@
                                     <td>@item.Phone</td>
                                     <td>@item.Message</td>
 
-                                    <td><a href="/Category/DeleteCategory/@item.ContactId" class="btn btn-outline-danger">Delete</a></td>
-
+                                    <td><a href="/Contact/DeleteContact/@item.ContactId" class="btn btn-outline-danger">Delete</a></td>
                                 </tr>
-
                             }
-
                         </tbody>
                     </table>
-
                 </div>
             </div>
         </div>
