@@ -1,0 +1,47 @@
+﻿@model List<Team>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="row">
+
+    <div class="col-lg-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Hakkımda Bölümü</h3>
+                <div class="table-responsive">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Üst Açıklama</th>
+                                <th>İsim Soyisim</th>
+                                <th>Başlık</th>
+                                <th>Resim Urlsi</th>
+
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                            @foreach (var item in Model)
+                            {
+                                <tr>
+
+                                    <td>@item.Topdescription</td>
+                                    <td>@item.Namesurname</td>
+                                    <td>@item.Title</td>
+                                    <td>@item.imgUrl</td>
+
+                                    <td><a href="/Team/DeleteTeam/@item.TeamId" class="btn btn-outline-danger">Sil</a></td>
+                                    <td><a href="/team/UpdateTeam/@item.TeamId" class="btn btn-outline-success">Güncelle</a></td>
+                                </tr>
+
+                            }
+
+                        </tbody>
+                    </table>
+                    <a href="/team/CreateTeam" class="btn btn-outline-primary">Yeni Çalışan Ekle</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

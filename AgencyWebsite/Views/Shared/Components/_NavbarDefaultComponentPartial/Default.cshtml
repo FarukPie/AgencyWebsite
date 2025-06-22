@@ -1,42 +1,44 @@
-﻿<div class="pixel-main-menu" id="sticker">
-    <div class="classy-nav-container breakpoint-off">
-        <div class="container-fluid">
-            <!-- Menu -->
-            <nav class="classy-navbar justify-content-between" id="pixelNav">
+﻿@model List<SocialMedia>
+<div class="pixel-main-menu" id="sticker">
+	<div class="classy-nav-container breakpoint-off">
+		<div class="container-fluid">
+			<!-- Menu -->
+			<nav class="classy-navbar justify-content-between" id="pixelNav">
 
-                <!-- Nav brand -->
-                <a href="/Default/Index" class="nav-brand">
-                    <img src="/pixel-master/img/core-img/spoilerLogo.png" alt="" style="width: 140px; height: 140px; object-fit: contain;">
-                </a>
+				<!-- Nav brand -->
+				<a href="/Default/Index" class="nav-brand">
+					<img src="/pixel-master/img/core-img/spoilerLogo.png" alt="" style="width: 140px; height: 140px; object-fit: contain;">
+				</a>
 
-                <!-- Navbar Toggler -->
-                <div class="classy-navbar-toggler">
-                    <span class="navbarToggler"><span></span><span></span><span></span></span>
-                </div>
+				<!-- Navbar Toggler -->
+				<div class="classy-navbar-toggler">
+					<span class="navbarToggler"><span></span><span></span><span></span></span>
+				</div>
 
-                <!-- Menu -->
-                <div class="classy-menu">
+				<!-- Menu -->
+				<div class="classy-menu">
 
-                    <!-- Close Button -->
-                    <div class="classycloseIcon">
-                        <div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
-                    </div>
+					<!-- Close Button -->
+					<div class="classycloseIcon">
+						<div class="cross-wrap"><span class="top"></span><span class="bottom"></span></div>
+					</div>
 
-                    <!-- Nav Start -->
-                    <div class="classynav">
-                        <!-- Top Social Info -->
-                        <div class="top-social-info ml-5">
-                            <a href="#"><i class="fa fa-facebook"></i></a>
-                            <a href="#"><i class="fa fa-dribbble"></i></a>
-                            <a href="#"><i class="fa fa-flickr"></i></a>
-                            <a href="#"><i class="fa fa-instagram"></i></a>
-                            <a href="#"><i class="fa fa-linkedin"></i></a>
-                            <a href="#"><i class="fa fa-pinterest"></i></a>
-                        </div>
-                    </div>
-                    <!-- Nav End -->
-                </div>
-            </nav>
-        </div>
-    </div>
+					<!-- Nav Start -->
+					<div class="classynav">
+						<!-- Top Social Info -->
+						@foreach (var item in Model)
+						{
+							<div class="top-social-info ml-5">
+								<a href="@item.item"><i class="fa fa-@item.imgUrl"></i></a>
+
+							</div>
+
+						}
+
+					</div>
+					<!-- Nav End -->
+				</div>
+			</nav>
+		</div>
+	</div>
 </div>

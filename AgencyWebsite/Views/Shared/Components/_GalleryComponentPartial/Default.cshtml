@@ -1,10 +1,12 @@
 ﻿@model List<Gallery>
+
 <div class="row g-4">
-    <!-- Görsel 1 -->
-    @foreach(var item in Model)
-    {
-        
- <div class="col-12 col-sm-6 col-lg-4 single_gallery_item visual">
+@foreach (var item in Model)
+{
+    // Benzersiz modal ID
+    var modalId = $"imageModal_{item.GalleryId}";
+    
+    <div class="col-12 col-sm-6 col-lg-4 single_gallery_item visual">
         <div class="position-relative">
             <img src="@item.imgUrl" alt="" class="img-fluid rounded" style="width: 100%; height: auto;">
 
@@ -14,7 +16,7 @@
                  onmouseover="this.style.opacity='1'" onmouseout="this.style.opacity='0'">
                 <div class="text-white text-center">
                     <!-- Modal trigger -->
-                    <a href="#" class="text-white" style="font-size: 1.5rem;" data-bs-toggle="modal" data-bs-target="#imageModal">
+                    <a href="#" class="text-white" style="font-size: 1.5rem;" data-bs-toggle="modal" data-bs-target="#@modalId">
                         <i class="fa fa-eye"></i>
                     </a>
                     <h4 class="mt-2">@item.HoverTitle</h4>
@@ -23,28 +25,20 @@
         </div>
     </div>
 
-    }
-   
-</div>
-
-@foreach(var item in Model)
-{
-    
-<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered modal-lg">
-        <div class="modal-content bg-dark text-white">
-            <div class="modal-header border-0">
-                <h5 class="modal-title" id="imageModalLabel">@item.MainTitle</h5>
-                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
-            </div>
-            <div class="modal-body text-center">
-                <img src="@item.imgUrl" alt="Modal Resim" class="img-fluid rounded mb-3">
-                <p>@item.Description</p>
+    <!-- Modal -->
+    <div class="modal fade" id="@modalId" tabindex="-1" aria-labelledby="modalLabel_@item.GalleryId" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content bg-dark text-white">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="modalLabel_@item.GalleryId">@item.MainTitle</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Kapat"></button>
+                </div>
+                <div class="modal-body text-center">
+                    <img src="@item.imgUrl" alt="Modal Resim" class="img-fluid rounded mb-3">
+                    <p>@item.Description</p>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-
 }
-
+</div>

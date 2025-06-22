@@ -1,0 +1,43 @@
+﻿@model Team
+@{
+    ViewData["Title"] = "UpdateTeam";
+    Layout = "~/Views/Layout/Index.cshtml";
+}
+<div class="row">
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Takım Güncelleme Sayfası</h4>
+                <form class="forms-sample" method="post">
+
+                    <div class="form-group">
+                        <input type="hidden" asp-for="TeamId" />
+                        <label for="exampleInputName1">Üst Açıklamayı Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="Topdescription">
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" asp-for="TeamId" />
+                        <label for="exampleInputName1">İsim Soyisim Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="Namesurname">
+                    </div>
+                    <div class="form-group">
+                        <input type="hidden" asp-for="TeamId" />
+                        <label for="exampleInputName1">Başlığı Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="Title">
+                    </div>
+
+                    <div class="form-group">
+                        <input type="hidden" asp-for="TeamId" />
+                        <label for="exampleInputName1">Resim Urlsini Güncelle</label>
+                        <input type="text" class="form-control" id="exampleInputName1" placeholder="Açıklama" asp-for="imgUrl">
+                    </div>
+              
+
+
+                    <button type="submit" class="btn btn-primary mr-2">Güncelle</button>
+                    <a href="/Team/Index" class="btn btn-outline-primary">Iptal</a>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

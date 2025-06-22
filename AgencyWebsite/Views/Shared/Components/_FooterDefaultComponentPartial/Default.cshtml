@@ -1,4 +1,5 @@
-﻿<footer class="footer-area section-padding-100-0">
+﻿@model List<SocialMedia>
+<footer class="footer-area section-padding-100-0">
     <div class="container-fluid">
         <div class="row justify-content-between">
 
@@ -19,8 +20,8 @@
                     <!-- Single Footer Widget -->
                     <div class="col-sm-4">
                         <div class="single-footer-widget mb-100">
-                            <h5 class="widget-title">Addresimiz</h5>
-                            <p>1530 Doverfield Ave <br> Hacienda Heights, California(CA), 91745</p>
+                            <h5 class="widget-title">Adresimiz</h5>
+                            <p>Antalya  <br> Manavgat</p>
                         </div>
                     </div>
 
@@ -28,8 +29,8 @@
                     <div class="col-sm-4">
                         <div class="single-footer-widget mb-100">
                             <h5 class="widget-title">Bizi Arayın!</h5>
-                            <a href="tel:+01251332331">
-                                <p><i class="fa fa-phone"></i> +01 251 332 331</p>
+                            <a href="tel:+05451331904">
+                                <p><i class="fa fa-phone"></i> +90 545 133 19 04</p>
                             </a>
 
                         </div>
@@ -39,14 +40,14 @@
                     <div class="col-sm-4">
                         <div class="single-footer-widget mb-100">
                             <h5 class="widget-title">Sosyal Medya Hesaplarımız</h5>
-                            <div class="footer-social-info">
-                                <a href="#"><i class="fa fa-facebook"></i></a>
-                                <a href="#"><i class="fa fa-dribbble"></i></a>
-                                <a href="#"><i class="fa fa-flickr"></i></a>
-                                <a href="#"><i class="fa fa-instagram"></i></a>
-                                <a href="#"><i class="fa fa-linkedin"></i></a>
-                                <a href="#"><i class="fa fa-pinterest"></i></a>
+                            @foreach(var item in Model)
+                            {
+                                 <div class="footer-social-info">
+                                <a href="@item.item"><i class="fa fa-@item.imgUrl"></i></a>
+
                             </div>
+                            }
+                           
                         </div>
                     </div>
                 </div>
@@ -63,11 +64,20 @@
                         <!-- Copywrite Text -->
                         <p class="copywrite-text">
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved
+                           <script>document.write(new Date().getFullYear());</script> Tüm Hakları Saklıdır
                             <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         </p>
                     </div>
                 </div>
+
+                <div class="col-12 col-md-6">
+                    <nav class="footer-nav">
+                        <ul>
+                            <li><a href="/Login/Index">Admin Girişi</a></li>
+                        </ul>
+                    </nav>
+                </div>
+
             </div>
         </div>
     </div>

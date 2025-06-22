@@ -52,6 +52,13 @@ namespace AgencyWebsite.Controllers
             }
         }
 
+        public async Task<IActionResult> LogOut()
+        {
+            await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
+            HttpContext.Session.Clear();
+            return RedirectToAction("Index", "Default");
+        }
+
 
 
     }

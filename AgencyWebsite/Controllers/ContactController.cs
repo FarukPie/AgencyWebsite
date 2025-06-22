@@ -1,4 +1,5 @@
 ﻿using AgencyWebsite.Context;
+using AgencyWebsite.Entities;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
@@ -25,6 +26,22 @@ namespace AgencyWebsite.Controllers
             _context.Contacts.Remove(value);
             _context.SaveChanges();
             return RedirectToAction("Index");
+        }
+
+        [HttpPost]
+        public IActionResult Submit(Contact contact)
+        {
+            if (ModelState.IsValid)
+            {
+                _context.Contacts.Add(contact);
+                _context.SaveChanges();
+
+                TempData["Success"] = "Mesajınız başarıyla iletildi!";
+                return RedirectToAction("Index", "Home");
+            }
+
+            TempData["Error"] = "Lütfen tüm alanları doldurun.";
+            return RedirectToAction("Index", "Home");
         }
     }
 }

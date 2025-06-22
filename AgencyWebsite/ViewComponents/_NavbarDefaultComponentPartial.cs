@@ -1,12 +1,20 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using AgencyWebsite.Context;
+using Microsoft.AspNetCore.Mvc;
 
 namespace AgencyWebsite.ViewComponents
 {
     public class _NavbarDefaultComponentPartial : ViewComponent
     {
-      public IViewComponentResult Invoke()
+        private readonly spoilerContext _context;
+public _NavbarDefaultComponentPartial(spoilerContext context)
         {
-            return View();
+            _context = context;
+        }
+
+        public IViewComponentResult Invoke()
+        {
+            var value=_context.SocialMedias.ToList();
+            return View(value);
         }
 
     }

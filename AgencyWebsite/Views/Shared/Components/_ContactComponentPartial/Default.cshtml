@@ -1,4 +1,6 @@
-﻿<section class="contact-area section-padding-100">
+﻿@model Contact
+
+<section class="contact-area section-padding-100">
     <div class="container">
         <div class="row">
             <div class="col-12">
@@ -13,12 +15,12 @@
             <div class="col-12 col-lg-8">
                 <!-- Contact Form -->
                 <div class="contact-form-area text-center">
-                    <form action="#" method="post">
-                        <input type="text" name="name" class="form-control wow fadeInUp" data-wow-delay="100ms" placeholder="İsminiz">
-                        <input type="email" name="email" class="form-control wow fadeInUp" data-wow-delay="300ms" placeholder="E-Postanız">
-                        <input type="text" name="subject" class="form-control wow fadeInUp" data-wow-delay="500ms" placeholder="Telefon numaranız">
-                        <textarea name="message" class="form-control wow fadeInUp" data-wow-delay="700ms" placeholder="Mesajınız"></textarea>
-                        <button type="submit" class="btn btn-outline-warning" data-wow-delay="900ms">Gönder   ></button>
+                    <form asp-controller="Contact" asp-action="Submit" method="post">
+                        <input type="text" asp-for="Namesurname" class="form-control wow fadeInUp" data-wow-delay="100ms" placeholder="İsminiz" />
+                        <input type="email" asp-for="Email" class="form-control wow fadeInUp" data-wow-delay="300ms" placeholder="E-Postanız" />
+                        <input type="text" asp-for="Phone" class="form-control wow fadeInUp" data-wow-delay="500ms" placeholder="Telefon numaranız" />
+                        <textarea asp-for="Message" class="form-control wow fadeInUp" data-wow-delay="700ms" placeholder="Mesajınız"></textarea>
+                        <button type="submit" class="btn btn-outline-warning" data-wow-delay="900ms">Gönder ></button>
                     </form>
                 </div>
             </div>
