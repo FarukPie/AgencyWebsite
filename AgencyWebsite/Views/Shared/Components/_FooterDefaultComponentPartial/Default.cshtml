@@ -40,14 +40,15 @@
                     <div class="col-sm-4">
                         <div class="single-footer-widget mb-100">
                             <h5 class="widget-title">Sosyal Medya Hesaplarımız</h5>
-                            @foreach(var item in Model)
-                            {
+                           
                                  <div class="footer-social-info">
+                                      @foreach(var item in Model)
+                            {
                                 <a href="@item.item"><i class="fa fa-@item.imgUrl"></i></a>
+                                }
 
                             </div>
-                            }
-                           
+                            
                         </div>
                     </div>
                 </div>

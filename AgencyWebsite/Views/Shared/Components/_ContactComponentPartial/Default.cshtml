@@ -17,9 +17,17 @@
                 <div class="contact-form-area text-center">
                     <form asp-controller="Contact" asp-action="Submit" method="post">
                         <input type="text" asp-for="Namesurname" class="form-control wow fadeInUp" data-wow-delay="100ms" placeholder="İsminiz" />
+                        <span asp-validation-for="Namesurname" class="text-danger"></span>
+
                         <input type="email" asp-for="Email" class="form-control wow fadeInUp" data-wow-delay="300ms" placeholder="E-Postanız" />
+                        <span asp-validation-for="Email" class="text-danger"></span>
+
                         <input type="text" asp-for="Phone" class="form-control wow fadeInUp" data-wow-delay="500ms" placeholder="Telefon numaranız" />
+                        <span asp-validation-for="Phone" class="text-danger"></span>
+
                         <textarea asp-for="Message" class="form-control wow fadeInUp" data-wow-delay="700ms" placeholder="Mesajınız"></textarea>
+                        <span asp-validation-for="Message" class="text-danger"></span>
+
                         <button type="submit" class="btn btn-outline-warning" data-wow-delay="900ms">Gönder ></button>
                     </form>
                 </div>
@@ -27,3 +35,8 @@
         </div>
     </div>
 </section>
+@section Scripts {
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/dist/jquery.validate.unobtrusive.min.js"></script>
+}

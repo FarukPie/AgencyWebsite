@@ -26,14 +26,15 @@
 					<!-- Nav Start -->
 					<div class="classynav">
 						<!-- Top Social Info -->
-						@foreach (var item in Model)
-						{
+					
 							<div class="top-social-info ml-5">
+									@foreach (var item in Model)
+						{
 								<a href="@item.item"><i class="fa fa-@item.imgUrl"></i></a>
-
+							}
 							</div>
 
-						}
+						
 
 					</div>
 					<!-- Nav End -->

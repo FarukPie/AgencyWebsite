@@ -29,6 +29,7 @@ namespace AgencyWebsite.Controllers
         }
 
         [HttpPost]
+        [AllowAnonymous]
         public IActionResult Submit(Contact contact)
         {
             if (ModelState.IsValid)
@@ -37,11 +38,18 @@ namespace AgencyWebsite.Controllers
                 _context.SaveChanges();
 
                 TempData["Success"] = "Mesajınız başarıyla iletildi!";
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Default");
+            }
+            else
+            {
+                TempData["Error"] = "Lütfen tüm alanları eksiksiz doldurun!";
+                return RedirectToAction("Index", "Default");
             }
 
-            TempData["Error"] = "Lütfen tüm alanları doldurun.";
-            return RedirectToAction("Index", "Home");
         }
+
+
+
+
     }
 }
